@@ -1,0 +1,16 @@
+a{
+  cursor: pointer;
+  transition: 0.9s;
+
+  &:hover{
+    color:white !important;
+  }
+}
+
+.icon {
+  cursor: pointer;
+
+  i:hover{
+    color: rgb(139, 195, 74) !important;
+  }
+}

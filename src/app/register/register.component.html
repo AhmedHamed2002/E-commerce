@@ -1,0 +1,25 @@
+<div class="container mt-5">
+    <form [formGroup]="registerForm" (ngSubmit)="register(registerForm)">
+    <label for="n1"> First Name :</label>
+    <input type="text" id="n1" class="form-control mb-3" formControlName="firstName"  required>
+    <div class="alert alert-danger" role="alert" *ngIf="registerForm.controls.firstName.invalid && registerForm.controls.firstName.touched">
+      Please Start With Capital Letter & in range from 3 to 16 caharacters
+    </div>
+    <label for="n2"> Last Name :</label>
+    <input type="text" id="n2" class="form-control mb-3" formControlName="lastName" required>
+    <label for="a"> Age :</label>
+    <input type="number" id="a" class="form-control mb-3" formControlName="age">
+    <label for="e"> Email :</label>
+    <input type="email" id="e" class="form-control mb-3" formControlName="email"  required>
+    <label for="p">  Password :</label>
+    <input type="password" id="p" class="form-control mb-3" formControlName="password"  required>
+    <div class="w-100 text-center">
+      <button class="btn btn-success mt-4 me-3" [disabled]="registerForm.invalid && registerForm.touched">Submit</button>
+      <button class="btn btn-danger mt-4 me-3" routerLink="/login">Login</button>
+    </div>
+  </form>
+  <div class="w-100 text-center">
+    <button class="btn btn-secondary mt-4" routerLink="/home" (click)="skip()">Skip</button>
+  </div>
+  </div>
+

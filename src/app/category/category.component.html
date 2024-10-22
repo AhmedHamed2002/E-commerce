@@ -1,0 +1,18 @@
+<div class="bg-C py-4">
+  <h1 class="text-success text-center py-4 ff"> All Gategory</h1>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-3 col-md-6 col-sm-12 p-5 text-center" *ngFor="let c of categories">
+        <div class="border border-success rounded-3 Card">
+          <div class="w-100 h_250px ">
+            <img src="../../../assets/images/{{c}}.png" alt="image" class="h-100 w-100 rounded-top-3">
+          </div>
+          <div class="py-3 bg-card rounded-bottom-3">
+            <h4 class="text-success">{{c}}</h4>
+            <button class="btn btn-success" [routerLink]="['/products' , c]">All products</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

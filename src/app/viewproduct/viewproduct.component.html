@@ -1,0 +1,48 @@
+<div class="h-100 bg-D py-5">
+  <section class="container h-100 d-flex align-items-center py-5 my-5">
+    <div class="row m-auto">
+      <div class="col-12 col-md-8">
+        <div class="border border-success rounded-5 bg-white p-5">
+          <h3 class="text-success mb-4">{{details.title}}</h3>
+          <p class="fw-bold text-success"> Brand : {{details.brand}}</p>
+          <p class="text-secondary">{{details.description}}</p>
+          <p class="text-warning">{{details.category}}</p>
+          <p class="text-danger fw-bold"><span class="text-black"> Price :</span> {{details.price}} <span class="text-success">$</span></p>
+          <p class="fw-bold text-danger"><span class="text-black"> Rating :</span>  {{details.rating}} <i class="fa-regular fa-star text-warning"></i></p>
+          <div class="w-100 mt-5">
+            <p class="w-100 text-end">
+              <a class="text-decoration-none text-success fs-4 m-auto" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                Show Reviews <i class="fa-solid fa-pen-fancy"></i>
+              </a>
+            </p>
+            <div class="collapse" id="collapseExample">
+              @for (r of details.reviews; track r.index) {
+                <div class="card card-body bg-card my-2 p-3">
+                  <div class="p-3">
+                    <div class="text-warning fw-bold">
+                      <span class="me-2">Rating : {{r.rating}}</span>
+                      <i class="fa-solid fa-star"></i>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-between mt-4">
+                      <span>Name :  {{r.reviewerName}}</span>
+                      <span class="text-danger">{{r.date}}</span>
+                    </div>
+                    <div class="bg-Comment mt-4 rounded-3 p-3">
+                      <p class="fw-bold">{{r.comment}}</p>
+                    </div>
+                  </div>
+                </div>
+              }
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-4">
+        <div class="image border border-success rounded-5 bg-white mt-5 mt-md-0">
+          <img src="{{details.images[0]}}" class="w-100 h-100" alt="image">
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+

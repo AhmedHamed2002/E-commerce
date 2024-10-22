@@ -1,0 +1,24 @@
+<div class="bg-C py-4">
+  <h1 class="text-success text-center py-4 ff"> All Products</h1>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-3 col-md-6 col-sm-12 p-5 text-center" *ngFor="let p of products">
+        <div class="border border-success rounded-3 Card">
+          <div class="w-100 h_250px bg-white rounded-top-3">
+            <img  [src]="p.images[0]" class="h-100 w-100" alt="image">
+          </div>
+          <div class="py-3 bg-card w-100 h_350px text-center rounded-bottom-3">
+            <div>
+              <h4 class="text-success my-3">{{p.title}}</h4>
+              <p>{{p.description}}</p>
+            </div>
+            <div class= "ms-5 w-100 h_80px d-flex justify-content-around align-items-center flex-column flex-md-row">
+              <button class="btn btn-secondary " [routerLink]="['/product' , p.id ]"> Details </button>
+              <button class="btn btn-success  "> Add to Card </button>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

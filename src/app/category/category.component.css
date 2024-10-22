@@ -1,0 +1,26 @@
+.h_250px{
+  height: 250px;
+}
+
+.bg-C{
+  background-color:rgb(241, 243, 233) ;
+}
+
+.bg-card{
+  background-color: rgb(194, 223, 161);
+}
+
+.Card{
+cursor: pointer;
+transition: 1.2s;
+
+&:hover{
+  transform: scale(1.1);
+}
+}
+
+button:hover{
+  background-color: black;
+  color: green;
+  transform: scale(0.9);
+}
